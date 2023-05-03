@@ -10,153 +10,150 @@ typedef struct
 
 } My_game;
 
-
 char *puzzles(int number)
 {
         char *duck;
         duck = malloc(20);
-        switch(number)
+        switch (number)
         {
-                case 1:
-                        printf("Под гору - коняшка, в гору - деревяшка.\n");
-                        duck = "Санки";
-                        break;
-                case 2:
-                        printf("На деревья, на кусты с неба падают цветы. Белые, пушистые, только не душистые.\n");
-                        duck = "Снег";
-                        break;
-                case 3:
-                        printf("Сидит в темнице, красная девица, а коса на улице.\n");
-                        duck = "Морковь";
-                        break;
-                case 4:
-                        printf("Зимой — звезда, весной — вода.\n");
-                        duck = "Снежинка";
-                        break;
-                case 5:
-                        printf("Кто зимой холодной ходит злой, голодный?\n");
-                        duck = "Волк";
-                        break;
-                case 6:
-                        printf("Не лает, не кусает, а в дом не пускает.\n");
-                        duck = "Замок";
-                        break;
-
-                case 7:
-                        printf("Сто одёжек и все без застежек.\n");
-                        duck = "Капуста";
-                        break;
-                case 8:
-                        printf("Сидит дед, в шубу одет, кто его раздевает, тот слёзы проливает.\n");
-                        duck = "Лук";
-                        break;
-                case 9:
-                        printf("Белые поросятки прилегли на грядке.\n");
-                        duck = "Кабачки";
-                        break;
-                case 10:
-                        printf("И сияет, и блестит, никому оно не льстит.\n");
-                        duck = "Зеркало";
-                        break;
-                case 11:
-                        printf("В доску спрячется бедняжка — чуть видна его фуражка.\n");
-                        duck = "Гвоздь";
-                        break;
-                case 12:
-                        printf("Зимой и летом одним цветом.\n");
-                        duck = "Ёлка";
-                        break;
-                case 13:
-                        printf("Сперва блеск, за блеском — треск!\n");
-                        duck = "Гроза";
-                        break;
-                case 14:
-                        printf("Рыжая плутовка, хитрая да ловкая, в сарай попала, кур пересчитала.\n");
-                        duck = "Лиса";
-                        break;
-                case 15:
-                        printf("По лужку он важно бродит, из воды сухим выходит, носит красные ботинки, дарит мягкие перинки.\n");
-                        duck = "Гусь";
-                        break;
-                case 16:
-                        printf("К нам приехали с бахчи полосатые мячи.\n");
-                        duck = "Арбуз";
-                        break;
-                case 17:
-                        printf("Белые горошки на зелёной ножке.\n");
-                        duck = "Ландыш";
-                        break;
-                case 18:
-                        printf("Зубы в пасти в три ряда. Это целая беда. Этот хищник знаменит, тем, что он — морской бандит.\n");
-                        duck = "Акула";
-                        break;
-                case 19:
-                        printf("Мы — лесные жители, мудрые строители. Из иголок всей артелью строим дом себе под елью.\n");
-                        duck = "Муравьи";
-                        break;
-                case 20:
-                        printf("По реке плывет бревно. Ох, и злющее оно!\n");
-                        duck = "Крокодил";
-                        break;
-                case 21:
-                        printf("Заворчал живой замок, лег у двери поперек. Две медали на груди. Лучше в дом не заходи!\n");
-                        duck = "Собака";
-                        break;
-                case 22:
-                        printf("Всех я вовремя бужу, хоть часов не завожу.\n");
-                        duck = "Петух";
-                        break;
-                case 23:
-                        printf("Все время стучит, деревья долбит. Но их не калечит, а только лечит.\n");
-                        duck = "Дятел";
-                        break;
-                case 24:
-                        printf("Сам пустой, голос густой, дробь отбивает, шагать и петь помогает.\n");
-                        duck = "Барабан";
-                        break;
-                case 25:
-                        printf("Упадет — поскачет, ударишь — не плачет.\n");
-                        duck = "Мяч";
-                        break;
-                case 26:
-                        printf("Ах, не трогайте меня: обожгу и без огня!\n");
-                        duck = "Крапива";
-                        break;
-                case 27:
-                        printf("Этот конь не ест овса, вместо ног — два колеса. Сядь верхом и мчись на нём, только лучше правь рулём.\n");
-                        duck = "Велосипед";
-                        break;
-                case 28:
-                        printf("То назад, то вперед, ходит, бродит пароход. Остановишь — горе! Продырявит море!\n");
-                        duck = "Утюг";
-                        break;
-                case 29:
-                        printf("Полюбуйся, посмотри — полюс северный внутри! Там сверкает снег и лед, там сама зима живет.\n");
-                        duck = "Холодильник";
-                        break;
-                case 30:
-                        printf("Я в любое время года и в любую непогоду очень быстро в час любой провезу вас под землей.\n");
-                        duck = "Метро";
-                        break;
-                default:
-                        errors(1);
-                        break;
+        case 1:
+                printf("Under the mountain is a pony, in the mountain - a wooden thing.\n");
+                duck = "Sled";
+                break;
+        case 2:
+                printf("Flowers fall from the sky onto trees and bushes. White, fluffy, but not fragrant.\\n");
+                duck = "Snow";
+                break;
+        case 3:
+                printf("A red maiden sits in a dungeon and her braid is on the street.\n");
+                duck = "Carrot";
+                break;
+        case 4:
+                printf("In winter - a star, in spring - water.\n");
+                duck = "Snowflake";
+                break;
+        case 5:
+                printf("Who is angry and hungry in cold winter?\n");
+                duck = "Wolf";
+                break;
+        case 6:
+                printf("It doesn't bark, doesn't bite, but doesn't let you into the house.\n");
+                duck = "Lock";
+                break;
+        case 7:
+                printf("A hundred clothes with no fasteners.\n");
+                duck = "Cabbage";
+                break;
+        case 8:
+                printf("An old man sits dressed in a fur coat, whoever undresses him sheds tears.\n");
+                duck = "Onion";
+                break;
+        case 9:
+                printf("Little white pigs lay on the ridges.\n");
+                duck = "Zucchini";
+                break;
+        case 10:
+                printf("It shines, it sparkles, it doesn't flatter anyone.\n");
+                duck = "Mirror";
+                break;
+        case 11:
+                printf("A poor fellow hides in the board - only his cap is visible.\n");
+                duck = "Nail";
+                break;
+        case 12:
+                printf("In winter and in summer, it is the same color.\n");
+                duck = "Christmas tree";
+                break;
+        case 13:
+                printf("At first, there is gloss, then - a crack!\n");
+                duck = "Thunderstorm";
+                break;
+        case 14:
+                printf("A red-haired rogue, cunning and skillful, came into the barn and recounted the hens.\n");
+                duck = "Fox";
+                break;
+        case 15:
+                printf("He walks importantly across the puddle, comes out of the water dry, wears red boots, gives soft featherbeds.\n");
+                duck = "Goose";
+                break;
+        case 16:
+                printf("Striped balls from the garden have arrived here.\n");
+                duck = "Watermelon";
+                break;
+        case 17:
+                printf("White peas on a green leg.\n");
+                duck = "Lily ";
+                break;
+        case 18:
+                printf("Teeth in the mouth in three rows. It's a whole disaster. This predator is famous for being a sea bandit.\n");
+                duck = "Shark";
+                break;
+        case 19:
+                printf("We are forest inhabitants, wise builders. We all together build a house for ourselves under the spruce from needles.\n");
+                duck = "Ants";
+                break;
+        case 20:
+                printf("A log floats down the river. Oh, and it's so wicked!\n");
+                duck = "Crocodile";
+                break;
+        case 21:
+                printf("The living castle growls, lies across the door. Two medals on his chest. Better not to go in!\n");
+                duck = "Dog";
+                break;
+        case 22:
+                printf("I wake everyone up on time, even though I don't wind the clocks.\n");
+                duck = "Rooster";
+                break;
+        case 23:
+                printf("He knocks all the time, pecks trees. But he doesn't cripple them, only heals them.\n");
+                duck = "Woodpecker";
+                break;
+        case 24:
+                printf("Empty itself, thick voice, beats, helps to march and sing.\n");
+                duck = "Drum";
+                break;
+        case 25:
+                printf("It will fall - it will bounce, you will hit - it will not cry.\n");
+                duck = "Ball";
+                break;
+        case 26:
+                printf("Oh, do not touch me: I will burn you even without fire!\n");
+                duck = "Nettle";
+                break;
+        case 27:
+                printf("This horse does not eat oats, two wheels instead of legs. Sit on top and ride it, just steer better.\n");
+                duck = "Bicycle";
+                break;
+        case 28:
+                printf("Then back, then forth, wanders, floats the ship. If you stop it - beware! It will poke holes in the sea!\n");
+                duck = "Iron";
+                break;
+        case 29:
+                printf("Admire, look - the North Pole inside! There shines snow and ice, there winter itself lives.\n");
+                duck = "Refrigerator";
+                break;
+        case 30:
+                printf("I can take you underground any time of the year and in any weather, and quickly take you anywhere in an hour.\n");
+                duck = "Subway";
+                break;
+        default:
+                errors(1);
+                break;
         }
         return duck;
 }
-My_game* get_data_for_start_game()
+My_game *get_data_for_start_game()
 {
         My_game *we_have = malloc(sizeof(My_game));
         we_have->puzzle_num = generate_number();
         char *duckpz = puzzles(we_have->puzzle_num);
         we_have->duck = duckpz;
         we_have->life = 4;
-        we_have->duck_guess = malloc(sizeof(we_have->duck)*sizeof(char));
+        we_have->duck_guess = malloc(sizeof(we_have->duck) * sizeof(char));
         return we_have;
-
 }
 
 int main()
 {
-return 0;
+        return 0;
 }
