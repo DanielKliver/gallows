@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 typedef struct
 {
@@ -18,83 +19,83 @@ char *puzzles(int number)
         {
         case 1:
                 printf("Under the mountain is a pony, in the mountain - a wooden thing.\n");
-                duck = "Sled";
+                duck = "sled";
                 break;
         case 2:
                 printf("Flowers fall from the sky onto trees and bushes. White, fluffy, but not fragrant.\\n");
-                duck = "Snow";
+                duck = "snow";
                 break;
         case 3:
                 printf("A red maiden sits in a dungeon and her braid is on the street.\n");
-                duck = "Carrot";
+                duck = "carrot";
                 break;
         case 4:
                 printf("In winter - a star, in spring - water.\n");
-                duck = "Snowflake";
+                duck = "snowflake";
                 break;
         case 5:
                 printf("Who is angry and hungry in cold winter?\n");
-                duck = "Wolf";
+                duck = "wolf";
                 break;
         case 6:
                 printf("It doesn't bark, doesn't bite, but doesn't let you into the house.\n");
-                duck = "Lock";
+                duck = "lock";
                 break;
         case 7:
                 printf("A hundred clothes with no fasteners.\n");
-                duck = "Cabbage";
+                duck = "cabbage";
                 break;
         case 8:
                 printf("An old man sits dressed in a fur coat, whoever undresses him sheds tears.\n");
-                duck = "Onion";
+                duck = "onion";
                 break;
         case 9:
                 printf("Little white pigs lay on the ridges.\n");
-                duck = "Zucchini";
+                duck = "zucchini";
                 break;
         case 10:
                 printf("It shines, it sparkles, it doesn't flatter anyone.\n");
-                duck = "Mirror";
+                duck = "mirror";
                 break;
         case 11:
                 printf("A poor fellow hides in the board - only his cap is visible.\n");
-                duck = "Nail";
+                duck = "nail";
                 break;
         case 12:
                 printf("In winter and in summer, it is the same color.\n");
-                duck = "Christmas tree";
+                duck = "christmas tree";
                 break;
         case 13:
                 printf("At first, there is gloss, then - a crack!\n");
-                duck = "Thunderstorm";
+                duck = "thunderstorm";
                 break;
         case 14:
                 printf("A red-haired rogue, cunning and skillful, came into the barn and recounted the hens.\n");
-                duck = "Fox";
+                duck = "fox";
                 break;
         case 15:
                 printf("He walks importantly across the puddle, comes out of the water dry, wears red boots, gives soft featherbeds.\n");
-                duck = "Goose";
+                duck = "goose";
                 break;
         case 16:
                 printf("Striped balls from the garden have arrived here.\n");
-                duck = "Watermelon";
+                duck = "watermelon";
                 break;
         case 17:
                 printf("White peas on a green leg.\n");
-                duck = "Lily ";
+                duck = "lily ";
                 break;
         case 18:
                 printf("Teeth in the mouth in three rows. It's a whole disaster. This predator is famous for being a sea bandit.\n");
-                duck = "Shark";
+                duck = "shark";
                 break;
         case 19:
                 printf("We are forest inhabitants, wise builders. We all together build a house for ourselves under the spruce from needles.\n");
-                duck = "Ants";
+                duck = "ants";
                 break;
         case 20:
                 printf("A log floats down the river. Oh, and it's so wicked!\n");
-                duck = "Crocodile";
+                duck = "crocodile";
                 break;
         case 21:
                 printf("The living castle growls, lies across the door. Two medals on his chest. Better not to go in!\n");
@@ -102,39 +103,39 @@ char *puzzles(int number)
                 break;
         case 22:
                 printf("I wake everyone up on time, even though I don't wind the clocks.\n");
-                duck = "Rooster";
+                duck = "rooster";
                 break;
         case 23:
                 printf("He knocks all the time, pecks trees. But he doesn't cripple them, only heals them.\n");
-                duck = "Woodpecker";
+                duck = "woodpecker";
                 break;
         case 24:
                 printf("Empty itself, thick voice, beats, helps to march and sing.\n");
-                duck = "Drum";
+                duck = "drum";
                 break;
         case 25:
                 printf("It will fall - it will bounce, you will hit - it will not cry.\n");
-                duck = "Ball";
+                duck = "ball";
                 break;
         case 26:
                 printf("Oh, do not touch me: I will burn you even without fire!\n");
-                duck = "Nettle";
+                duck = "nettle";
                 break;
         case 27:
                 printf("This horse does not eat oats, two wheels instead of legs. Sit on top and ride it, just steer better.\n");
-                duck = "Bicycle";
+                duck = "bicycle";
                 break;
         case 28:
                 printf("Then back, then forth, wanders, floats the ship. If you stop it - beware! It will poke holes in the sea!\n");
-                duck = "Iron";
+                duck = "iron";
                 break;
         case 29:
                 printf("Admire, look - the North Pole inside! There shines snow and ice, there winter itself lives.\n");
-                duck = "Refrigerator";
+                duck = "refrigerator";
                 break;
         case 30:
                 printf("I can take you underground any time of the year and in any weather, and quickly take you anywhere in an hour.\n");
-                duck = "Subway";
+                duck = "subway";
                 break;
         default:
                 errors(1);
@@ -142,6 +143,23 @@ char *puzzles(int number)
         }
         return duck;
 }
+
+void strlower(char*string)
+{
+        for(int i = 0; i<strlen(string); i++)
+        {
+                string[i] = tolwer (string[i]);
+        }
+}
+
+int generate_number()
+{
+        stand(time(NULL));;
+        int random_value = rand()%30;
+        return random_value;
+}
+
+
 My_game *get_data_for_start_game()
 {
         My_game *we_have = malloc(sizeof(My_game));
