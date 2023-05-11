@@ -4,15 +4,16 @@
 
 typedef struct
 {
-        int life;
-        int puzzle_num;
-        char *duck;
-        char *duck_guess;
+	int life;
+	int puzzle_num;
+	char *duck;
+	char *duck_guess;
 
 } My_game;
 
 char *puzzles(int number)
 {
+
         char *duck;
         duck = malloc(20);
         switch (number)
@@ -160,18 +161,72 @@ int generate_number()
 }
 
 
+
 My_game *get_data_for_start_game()
 {
-        My_game *we_have = malloc(sizeof(My_game));
-        we_have->puzzle_num = generate_number();
-        char *duckpz = puzzles(we_have->puzzle_num);
-        we_have->duck = duckpz;
-        we_have->life = 4;
-        we_have->duck_guess = malloc(sizeof(we_have->duck) * sizeof(char));
-        return we_have;
+	My_game *we_have = malloc(sizeof(My_game));
+	we_have->puzzle_num = generate_number();
+	char *duckpz = puzzles(we_have->puzzle_num);
+	we_have->duck = duckpz;
+	we_have->life = 4;
+	we_have->duck_guess = malloc(sizeof(we_have->duck) * sizeof(char));
+	return we_have;
+}
+
+void examination_letter(My_game* we_have, char next_letter)
+{
+	int count_letter = 0;
+	for(int i = 0; i < sizeof(we_have->duck); i++)
+	{
+
+		if(we_have->duck[i] == next_letter)
+		{
+			we_have->duck_guess[i] = next_letter;
+			count_letter++;
+		}
+
+	}
+	if(count_letter >= 1)
+	{
+		printf("Такая буква есть\n");
+	}
+	else
+	{
+		printf("Такой буквы нет\n");
+		we_have->life--;
+	}
+	printf("Ваше слово: %s\n", we_have->duck_guess);
+
+
+
+}
+
+void custom_block(My_game* we_have)
+{
+	while(we_have->life>0 && strcmp(we_have->duck_guess, we_have->duck)!=0)
+	{
+		char next_letter;
+		getchar();
+		while((next_letter = getchar()!='\n' && next_letter != EOF));
+		printf("Введите букву: \n");
+		next_letter = getchar();
+		strlower(&next_letter);
+		examination_letter(we_have, next_letter);
+	}
+	if(we_have->life<=0)
+	{
+		printf("ВЫ ПРОИГРАЛИ\n");
+	}
+	if(strcmp(we_have->duck_guess, we_have->duck)==0 && we_have->life>0)
+	{
+		printf("ВЫ ВЫИГРАЛИ\n");
+	}
+
 }
 
 int main()
 {
-        return 0;
+	My_game* we_have = get_data_for_start_game();
+	custom_block(we_have);
+	return 0;
 }
