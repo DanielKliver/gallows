@@ -210,4 +210,4 @@ int main()
 	My_game* we_have = get_data_for_start_game();
 	custom_block(we_have);
 	return 0;
-}`
+}
