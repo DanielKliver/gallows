@@ -156,7 +156,7 @@ void strlower(char*string)
 int generate_number()
 {
         stand(time(NULL));;
-        int random_value = rand()%30;
+        int random_value = 1 + rand()%30;
         return random_value;
 }
 
