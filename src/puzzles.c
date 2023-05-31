@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <user.h>
 
 char *puzzles(int number, int print)
 {
@@ -312,7 +313,6 @@ char *puzzles(int number, int print)
 			break;
 		default:
 			errors(1);
-			break;
 	}
 	return duck;
 
