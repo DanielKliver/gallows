@@ -134,7 +134,7 @@ char* puzzles(int number, int print)
         if (print == 1) {
             printf("White peas on a green leg.\n");
         } else {
-            duck = "lily ";
+            duck = "lily";
         }
         break;
     case 18:
