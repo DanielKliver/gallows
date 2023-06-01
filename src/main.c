@@ -20,7 +20,7 @@ int main()
         while ((c = getchar() != '\n' && c != EOF))
             ; //Классная штука, чистит буфер
         if (choise != 1 && choise != 2) {
-            printf("it's not a choise.\n");
+            printf("This is the wrong choice.\n");
         }
     }
     printf("\n\n\n");
