@@ -1,14 +1,11 @@
-#include <stdio.h>
 #include <assert.h>
-#include <string.h>
-#include <stdlib.h>
 #include <ctype.h>
+#include <puzzles.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <user.h>
-#include <puzzles.h>
 
 void test_enteface()
 {
@@ -63,7 +60,8 @@ void test_print_duck_guess()
     strcpy(game.duck_guess, "a b c");
     print_duck_guess(&game);
 
-    // Тест 5: проверка вывода строки с символами, цифрами и специальными символами
+    // Тест 5: проверка вывода строки с символами, цифрами и специальными
+    // символами
     strcpy(game.duck_guess, "Hello123!@#");
     print_duck_guess(&game);
 }
@@ -72,6 +70,6 @@ int main(void)
 {
     test_enteface();
     test_print_duck_guess();
-    
+
     return 0;
 }

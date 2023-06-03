@@ -1,14 +1,11 @@
-#include <stdio.h>
 #include <assert.h>
-#include <string.h>
-#include <stdlib.h>
 #include <ctype.h>
+#include <puzzles.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <user.h>
-#include <puzzles.h>
 
 void test_puzzles()
 {
@@ -43,12 +40,12 @@ void test_puzzles()
     result = puzzles(6, 0);
     printf("Puzzle 6: %s\n", result);
     assert(strcmp(result, "lock") == 0);
-    
+
     // Тест 7
     result = puzzles(7, 0);
     printf("Puzzle 7: %s\n", result);
     assert(strcmp(result, "cabbage") == 0);
-    
+
     // Тест 8
     result = puzzles(8, 0);
     printf("Puzzle 8: %s\n", result);

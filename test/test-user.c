@@ -1,17 +1,11 @@
-#include <stdio.h>
 #include <assert.h>
-#include <string.h>
-#include <stdlib.h>
 #include <ctype.h>
+#include <puzzles.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <user.h>
-#include <puzzles.h>
-
-
-
 
 // Тестируем функцию generate_number()
 void test_generate_number()
@@ -29,7 +23,8 @@ void test_strlower()
     strlower(string);
     printf("Lowercased string: %s\n", string);
     // Проверяем, что все символы строки стали в нижнем регистре
-    assert(string[0] == 'h' && string[1] == 'e' && string[2] == 'l' && string[3] == 'l' && string[4] == 'o');
+    assert(string[0] == 'h' && string[1] == 'e' && string[2] == 'l'
+           && string[3] == 'l' && string[4] == 'o');
 }
 
 // Тестируем функцию examination_letter()
@@ -43,7 +38,8 @@ void test_examination_letter()
     examination_letter(&game, 'l');
     printf("Duck guess: %s\n", game.duck_guess);
     printf("Remaining life: %d\n", game.life);
-    // Проверяем, что буква 'l' была найдена в слове и вставлена в массив duck_guess
+    // Проверяем, что буква 'l' была найдена в слове и вставлена в массив
+    // duck_guess
     assert(game.duck_guess[2] == 'l');
     // Проверяем, что количество оставшихся жизней уменьшилось
     assert(game.life == 4);
@@ -51,7 +47,8 @@ void test_examination_letter()
     examination_letter(&game, 'z');
     printf("Duck guess: %s\n", game.duck_guess);
     printf("Remaining life: %d\n", game.life);
-    // Проверяем, что буква 'z' не была найдена в слове и количество оставшихся жизней уменьшилось
+    // Проверяем, что буква 'z' не была найдена в слове и количество оставшихся
+    // жизней уменьшилось
     assert(game.duck_guess[2] == 'l');
     assert(game.life == 3);
 
